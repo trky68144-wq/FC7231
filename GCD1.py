@@ -18,7 +18,31 @@ class GCD:
             b = rem
             #when b reaches 0, a is the answer (the GCD)
         return a
+while True:
+    #take the input from the user for the first number
+    num1 = input('Enter your first number')
+    #take the input from the user for the second number
+    num2 = input('Enter your second number')
+    #checking if both numbers are digits
+    if num1.isdigit() and num2.isdigit():
+        #conversting strings into integers
+        num1 = int(num1)
+        num2 = int(num2)
+        #check if both numbers are positive
+        if num1 > 0 and num2 > 0:
+            #create an object GCD
+            x = GCD()
+            #call the function to find the GCD for the 2 numbers
+            result = x.find_GCD(num1, num2)
+            print(f'GCD {result}')
+            break
+            
+        else:
+            #print an error if any number is zero or negitive
+            print('the number must be positive')
+    else:
+        #print an error message if the input has no digital characters
+        print('the number is invalid')
 
 
  
-    
